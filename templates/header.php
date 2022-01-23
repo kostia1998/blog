@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<table class="layout">
+    <tr>
+        <td colspan="2" class="header">
+            Project
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: right">
+            <?php if (!empty($user)): ?>
+                Hello, <?= $user->getNickname() ?>  | <a href="http://project/users/logOut">logout</a>
+            <?php else: ?>
+                <a href="http://project/users/login">Sign in</a> | <a href="http://project/users/register">Sign up</a>
+            <? endif; ?>
+        </td>
+    </tr>
+    <tr>
+        <td>
